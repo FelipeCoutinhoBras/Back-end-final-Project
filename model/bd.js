@@ -27,6 +27,9 @@ const ProfessorModel = sequelize.define('Professor', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    email: {
+        type: DataTypes.STRING
+    }
 })
 
 const AlunoModel = sequelize.define('Aluno', {
@@ -39,6 +42,9 @@ const AlunoModel = sequelize.define('Aluno', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    email: {
+        type: DataTypes.STRING
+    }
 })
 CursoModel.hasMany(AlunoModel)
 CursoModel.hasMany(ProfessorModel)
